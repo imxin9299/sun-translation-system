@@ -23,8 +23,7 @@
   </div>
 </template>
 
-<style>
-</style>
+<style></style>
 
 <script>
 import Swal from "sweetalert2";
@@ -66,12 +65,12 @@ export default {
         let reader = new FileReader();
 
         reader.onload = (event) => {
-          let jsonStr = JSON.stringify(event.target.result);
-          jsonStr = JSON.parse(jsonStr);
+          let jsonStr = event.target.result.trim();
           if (jsonStr[jsonStr.length - 1] == ",")
             jsonStr = `[${jsonStr.slice(0, -1)}]`;
 
           this.$store.dispatch("setFile", JSON.parse(jsonStr));
+          this.$store.dispatch("setFileName", this.file.name);
         };
 
         reader.readAsText(this.file);

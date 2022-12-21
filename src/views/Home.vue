@@ -34,7 +34,10 @@ export default {
 
       let dlAnchorElem = document.createElement("a");
       dlAnchorElem.setAttribute("href", dataStr);
-      dlAnchorElem.setAttribute("download", "scene.json");
+      dlAnchorElem.setAttribute(
+        "download",
+        `${this.$store.state.fileName.slice(0, -5)}_translated.json`
+      );
       dlAnchorElem.click();
     },
   },

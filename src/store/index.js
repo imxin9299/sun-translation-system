@@ -3,7 +3,8 @@ import { createStore } from 'vuex'
 export default createStore({
   state: {
     untranslatedJSON: undefined,
-    translatedJSON: undefined
+    translatedJSON: undefined,
+    fileName: undefined,
   },
   mutations: {
     SET_FILE(state, file) {
@@ -27,6 +28,9 @@ export default createStore({
           i.param[0][3] = value
         }
       })
+    },
+    SET_FILE_NAME(state, name) {
+      state.fileName = name
     }
   },
   actions: {
@@ -38,6 +42,9 @@ export default createStore({
     },
     setTranslated({ commit }, newVal) {
       commit("SET_TRANSLATED", newVal)
+    },
+    setFileName({ commit }, fileName) {
+      commit("SET_FILE_NAME", fileName)
     }
   }
 })

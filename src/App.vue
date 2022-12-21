@@ -2,7 +2,7 @@
   <q-layout view="hHH lpR fFf">
     <q-header elevated class="bg-primary text-white" color="yellow-2">
       <q-toolbar>
-        <q-toolbar-title> Title </q-toolbar-title>
+        <q-toolbar-title> Sun Translator System </q-toolbar-title>
       </q-toolbar>
     </q-header>
 
