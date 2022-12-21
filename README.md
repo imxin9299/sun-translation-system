@@ -1,24 +1,23 @@
-# app
+# Sun Translation System
 
-## Project setup
-```
-npm install
-```
+## IMPORTANT
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+### System might be buggy. Please keep all copy of your translated files to prevent progress lost.
 
-### Compiles and minifies for production
-```
-npm run build
-```
+## How To Use
 
-### Lints and fixes files
-```
-npm run lint
-```
+1. Pick a JSON file (source should get from sus, he got the right format).
+   ![1](https://i.imgur.com/VbzoOZe.png)
+2. Upload the file.
+   ![1](https://i.imgur.com/epUnOj2.png)
+3. All of the details should be shown.
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+   i. Click here to copy the original text
+
+   ii. Insert your translation here. ()
+
+   ![1](https://i.imgur.com/DzBw05M.png)
+
+4. After everything is done, click the save button to save a copy of the translated JSON file.
+   Note: Incomplete progress can still be saved, upload the file again to continue the progress.
+   ![1](https://i.imgur.com/rgzHHuB.png)
