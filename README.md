@@ -1,4 +1,4 @@
-# sun-translation-system
+# app
 
 ## Project setup
 ```

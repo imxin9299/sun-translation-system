@@ -1,26 +1,28 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <q-layout view="hHH lpR fFf">
+    <q-header elevated class="bg-primary text-white" color="yellow-2">
+      <q-toolbar>
+        <q-toolbar-title> Title </q-toolbar-title>
+      </q-toolbar>
+    </q-header>
+
+    <q-page-container>
+      <Home />
+    </q-page-container>
+
+    <q-footer elevated class="q-pa-md text-center bg-grey-8 text-white">
+      <div>Doing Works Koei Tecmo Won't</div>
+    </q-footer>
+  </q-layout>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Home from "./views/Home.vue";
 
 export default {
-  name: 'App',
+  name: "LayoutDefault",
   components: {
-    HelloWorld
-  }
-}
+    Home,
+  },
+};
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
