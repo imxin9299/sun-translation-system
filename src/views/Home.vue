@@ -26,11 +26,14 @@ export default {
         return i;
       });
 
-      transformed = JSON.stringify(transformed);
-      transformed = transformed.slice(1, -1) + ",";
+      let jsonStr = "";
+
+      transformed.forEach((i) => {
+        jsonStr += JSON.stringify(i) + ",\n";
+      });
 
       let dataStr =
-        "data:text/json;charset=utf-8," + encodeURIComponent(transformed);
+        "data:text/json;charset=utf-8," + encodeURIComponent(jsonStr);
 
       let dlAnchorElem = document.createElement("a");
       dlAnchorElem.setAttribute("href", dataStr);
