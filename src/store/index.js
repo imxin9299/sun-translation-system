@@ -29,6 +29,9 @@ export default createStore({
         }
       })
     },
+    CLEAR_TRANSLATED(state) {
+      state.translatedJSON = undefined
+    },
     SET_FILE_NAME(state, name) {
       state.fileName = name
     }
@@ -42,6 +45,9 @@ export default createStore({
     },
     setTranslated({ commit }, newVal) {
       commit("SET_TRANSLATED", newVal)
+    },
+    clearTranslated({ commit }) {
+      commit("CLEAR_TRANSLATED")
     },
     setFileName({ commit }, fileName) {
       commit("SET_FILE_NAME", fileName)
