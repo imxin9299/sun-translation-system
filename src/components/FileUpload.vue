@@ -69,6 +69,7 @@ export default {
           if (jsonStr[jsonStr.length - 1] == ",")
             jsonStr = `[${jsonStr.slice(0, -1)}]`;
 
+          this.$store.dispatch("clearTranslated");
           this.$store.dispatch("setFile", JSON.parse(jsonStr));
           this.$store.dispatch("setFileName", this.file.name);
         };
@@ -91,6 +92,7 @@ export default {
           this.file = undefined;
           this.uploaded = false;
           this.$store.dispatch("clearFile");
+          this.$store.dispatch("clearTranslated");
         }
       });
     },
