@@ -21,14 +21,27 @@ export default {
   },
   methods: {
     exportJSON() {
-      let transformed = this.$store.state.translatedJSON.map((i) => {
-        delete i.id;
-        return i;
+      let transformed = this.$store.state.translatedJSON;
+
+      let noId = transformed.map((i) => {
+        let param1 = i.param[0][0] == undefined ? "" : i.param[0][0];
+        let param2 = i.param[0][1] == undefined ? "" : i.param[0][1];
+        let param3 = i.param[0][2] == undefined ? "" : i.param[0][2];
+        let param4 = i.param[0][3] == undefined ? "" : i.param[0][3];
+
+        return {
+          cmd: i.cmd,
+          row: i.row,
+          disp_name: i.disp_name,
+          name: i.name,
+          param: [[param1, param2, param3, param4]],
+          targets: i.targets,
+        };
       });
 
       let jsonStr = "";
 
-      transformed.forEach((i) => {
+      noId.forEach((i) => {
         jsonStr += JSON.stringify(i) + ",\n";
       });
 
